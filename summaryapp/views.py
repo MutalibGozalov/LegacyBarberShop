@@ -7,7 +7,7 @@ from django.contrib.auth.decorators import login_required, permission_required
 from django.core.paginator import Paginator
 from django.db.models import Q
 
-@permission_required('is_superuser','reception')
+# @permission_required('is_superuser','reception')
 @login_required(login_url="/login")
 def dashboard(request):
     assignments = AssingmentModel.objects.all().order_by('-id')[:5]
