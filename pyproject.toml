@@ -1,5 +1,5 @@
 [tool.poetry]
-name = "cnnttodb"
+name = "LehacyBarberShop"
 version = "0.1.0"
 description = ""
 authors = ["Mutalib Gozalov <mg@mail.com>"]
