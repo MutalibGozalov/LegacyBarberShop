@@ -7,8 +7,8 @@ from django.contrib.auth.decorators import login_required, permission_required
 from django.core.paginator import Paginator
 from django.db.models import Q
 
-# @permission_required('is_superuser','reception')
 @login_required(login_url="/login")
+@permission_required('is_superuser', 'reception')  #this decoratot should come after login_reguired() decorator !! or even before login decorator will take effect and after login even user is super_user user will be forfarded to reception page instead of dashboard.
 def dashboard(request):
     assignments = AssingmentModel.objects.all().order_by('-id')[:5]
 
